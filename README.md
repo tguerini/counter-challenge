@@ -53,10 +53,10 @@ app/components/Counter.tsx
 Componente de servidor que obtiene y muestra el valor actual del contador. También muestra un mensaje de "Loading" si se está procesando alguna acción.
 
 app/components/ClientButton.tsx
-Componente de cliente reutilizable para los botones de + y -. Muestra un ícono de carga mientras se espera la respuesta del servidor.
+Componente de cliente reutilizable para los botones de + y -. Muestra el mensaje "Loading" mientras se espera la respuesta del servidor.
 
 app/server/actions.ts
-Contiene las server actions para obtener, incrementar, decrementar y reiniciar el contador. También maneja el estado interno de "cargando" mediante funciones auxiliares setIsLoading() y getIsLoading().
+Contiene las server actions para obtener, incrementar, decrementar y reiniciar el contador.
 
 app/page.tsx
 Página principal. Muestra el título y el contador centrado en pantalla.
@@ -72,9 +72,6 @@ Página principal. Muestra el título y el contador centrado en pantalla.
 📌 Decisiones Técnicas
 ✅ Uso de ClientButton.tsx como componente de cliente
 Decidí encapsular la lógica de loading en los botones en un componente cliente separado para no convertir todo el componente Counter (que es de servidor) en cliente. Esto mejora la separación de responsabilidades y evita problemas con el renderizado de server components.
-
-✅ Uso de setIsLoading() y getIsLoading() en el servidor
-Como no se podía usar useState en componentes de servidor, se implementaron funciones para simular un estado de loading dentro de actions.ts. Esto lo use para simular comportamiento asíncrono y controlar cuándo mostrar el mensaje de "loading"
 
 ✅ Reinicio del contador cada 20 minutos
 La verificación del tiempo desde la última modificación se hace cada vez que se solicita el valor actual del contador (getCurrentValue). Si pasaron más de 20 minutos, se resetea el valor a 0 automáticamente, sin depender de que la página esté abierta.

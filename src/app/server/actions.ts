@@ -5,16 +5,6 @@ import { revalidatePath } from 'next/cache'
 
 const prisma = new PrismaClient()
 
-let isLoading: boolean;
-
-export async function setIsloading(condition: boolean){
-  isLoading=condition;
-}
-
-export async function getIsLoading(): Promise<boolean>{
-  return isLoading;
-}
-
 export async function getCurrentValue(): Promise<number>{
   let counter = await prisma.counter.findUnique({
     where: { id: 1 },
@@ -39,7 +29,6 @@ export async function getCurrentValue(): Promise<number>{
 }
 
 export async function increment(){
-  await setIsloading(true)
   const counter = await prisma.counter.update({
     where: { id: 1 },
     data: {
@@ -47,12 +36,10 @@ export async function increment(){
       updatedAt: new Date()
     },
   })
-  await setIsloading(false)
   revalidatePath('/')
 }
 
 export async function decrement() {
-  await setIsloading(true)
   const counter = await prisma.counter.update({
     where: { id: 1 },
     data: {
@@ -60,7 +47,6 @@ export async function decrement() {
       updatedAt: new Date()
     },
   })
-  await setIsloading(false)
   revalidatePath('/')
 }
 
