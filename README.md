@@ -36,16 +36,10 @@ npm install
 DATABASE_URL = "postgresql://postgres:[YOUR-PASSWORD]@db.rhvndokjljwfmuxqlecj.supabase.co:5432/postgres"
 ```
 
-4. Inicializá la base de datos:
+4. Levantá el servidor:
 
 ```bash
-npx prisma migrate dev --name init
-```
-
-5. Levantá el servidor:
-
-```bash
-npm run dev
+npx run dev
 ```
 
 ## 🧠 Estructura del Proyecto
