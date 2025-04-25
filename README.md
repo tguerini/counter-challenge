@@ -1,6 +1,6 @@
 # 🧮 Contador Persistente - Fullstack con Next.js y Prisma
 
-Este proyecto es una aplicación simple de contador persistente desarrollada con **Next.js 13**, **TypeScript**, **Tailwind CSS**, **Prisma ORM** y una base de datos **PostgreSQL**.
+Este proyecto es una aplicación simple de contador persistente desarrollada con **Next.js**, **TypeScript**, **Tailwind CSS**, **Prisma ORM** y una base de datos **PostgreSQL**.
 
 La funcionalidad principal permite incrementar o decrementar un contador, guardando el valor actual en la base de datos. El valor se mantiene incluso si el usuario cierra la página. Además, si pasan 20 minutos desde la última interacción, el contador se reinicia automáticamente.
 
