@@ -7,7 +7,7 @@ La funcionalidad principal permite incrementar o decrementar un contador, guarda
 
 ## 📦 Tecnologías Usadas
 
-- Next.js 13 (App Router)
+- Next.js (App Router)
 - TypeScript
 - Tailwind CSS
 - Prisma ORM
