@@ -64,10 +64,10 @@ Página principal. Muestra el título y el contador centrado en pantalla.
 ⌛ Indicador de carga: Al hacer clic en los botones, se muestra un estado de carga hasta que la acción finaliza.
 
 📌 Decisiones Técnicas
-✅ Uso de ClientButton.tsx como componente de cliente
+✅ Uso de ClientButton.tsx como componente de cliente.
 Decidí encapsular la lógica de loading en los botones en un componente cliente separado para no convertir todo el componente Counter (que es de servidor) en cliente. Esto mejora la separación de responsabilidades y evita problemas con el renderizado de server components.
 
-✅ Reinicio del contador cada 20 minutos
+✅ Reinicio del contador cada 20 minutos.
 La verificación del tiempo desde la última modificación se hace cada vez que se solicita el valor actual del contador (getCurrentValue). Si pasaron más de 20 minutos, se resetea el valor a 0 automáticamente, sin depender de que la página esté abierta.
 
 
