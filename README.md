@@ -20,8 +20,8 @@ La funcionalidad principal permite incrementar o decrementar un contador, guarda
 1. **Cloná el repositorio:**
 
 ```bash
-git clone https://github.com/tu-usuario/counter-app.git
-cd counter-app
+git clone https://github.com/tguerini/counter-challenge.git
+cd counter
 ```
 
 2. Instala dependencias
