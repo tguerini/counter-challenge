@@ -49,14 +49,3 @@ export async function decrement() {
   })
   revalidatePath('/')
 }
-
-export async function reset() {
-  await prisma.counter.update({
-    where: { id: 1 },
-    data: { 
-      value: 0, 
-      updatedAt: new Date()
-    },
-  })
-  revalidatePath('/')
-}
