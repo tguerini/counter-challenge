@@ -50,7 +50,7 @@ app/components/ClientButton.tsx
 Componente de cliente reutilizable para los botones de + y -. Muestra el mensaje "Loading" mientras se espera la respuesta del servidor.
 
 app/server/actions.ts
-Contiene las server actions para obtener, incrementar, decrementar.
+Contiene las server actions para obtener, incrementar y decrementar.
 
 app/page.tsx
 Página principal. Muestra el título y el contador centrado en pantalla.
